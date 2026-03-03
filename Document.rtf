@@ -1,0 +1,314 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil\fcharset1 Segoe UI Symbol;}{\f3\fnil Calibri;}{\f4\fnil\fcharset1 Segoe UI Emoji;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+  <meta charset="UTF-8">\par
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">\par
+  <title>happy birthday \'b7 meri unho \f1\u-10179?\u-8700?\f0 </title>\par
+  <!-- fonts & css -->\par
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">\par
+  <style>\par
+    /* RESET & GLOBAL */\par
+    * \{ margin: 0; padding: 0; box-sizing: border-box; \}\par
+    body \{ font-family: 'Poppins', sans-serif; background: #0b0a0c; color: #f5e9e4; overflow-x: hidden; \}\par
+    a \{ text-decoration: none; color: inherit; \}\par
+    canvas#bg-canvas \{ position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; \}\par
+    .section \{ position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem 1.5rem; z-index: 2; \}\par
+    .glass-card \{ background: rgba(20, 15, 20, 0.3); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 215, 200, 0.15); border-radius: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(212, 175, 55, 0.1) inset; padding: 2.5rem 2rem; max-width: 700px; width: 100%; \}\par
+    h1, h2, h3 \{ font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.02em; \}\par
+    .gold \{ color: #e5c687; text-shadow: 0 0 8px #e5c68788; \}\par
+    .pink \{ color: #fbc1c1; \}\par
+    .btn \{ background: transparent; border: 1.5px solid #e5c687; color: #e5c687; padding: 1rem 2.8rem; border-radius: 50px; font-weight: 500; letter-spacing: 2px; cursor: pointer; transition: all 0.5s ease; backdrop-filter: blur(4px); box-shadow: 0 0 15px #e5c68722; \}\par
+    .btn:hover \{ background: #e5c687; color: #0b0a0c; box-shadow: 0 0 35px #e5c687; border-color: #fff0db; \}\par
+    /* intro screen */\par
+    .intro-screen \{ position: fixed; top:0; left:0; width:100%; height:100vh; background: #0b0a0c; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 1.5s cubic-bezier(0.77,0,0.18,1); \}\par
+    .intro-content \{ text-align: center; opacity: 0; transform: translateY(30px); animation: introFadeIn 2s forwards 0.5s; \}\par
+    @keyframes introFadeIn \{ to \{ opacity:1; transform:translateY(0); \} \}\par
+    .intro-title \{ font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.2; margin-bottom: 2rem; \}\par
+    .intro-title span \{ display: block; \}\par
+    .intro-title .line1 \{ font-weight: 300; font-size: 0.6em; letter-spacing: 6px; color: #fbc1c1; \}\par
+    .intro-title .line2 \{ font-weight: 900; background: linear-gradient(145deg, #fde2b3, #e5c687, #f8b7b7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 20px #e5c687; \}\par
+    /* sparkles / floating */\par
+    .floating-heart \{ position: absolute; font-size: 1.2rem; opacity: 0.4; pointer-events: none; \}\par
+    /* sections after intro */\par
+    .hidden \{ display: none; \}\par
+    /* hero */\par
+    .hero-heading \{ font-size: clamp(2.4rem, 10vw, 5rem); text-align: center; line-height: 1.3; \}\par
+    .glow \{ animation: glowPulse 3s infinite; \}\par
+    @keyframes glowPulse \{ 0% \{ text-shadow: 0 0 10px #fbc1c1, 0 0 30px #e5c687; \} 50% \{ text-shadow: 0 0 25px #fbc1c1, 0 0 60px #e5c687; \} 100% \{ text-shadow: 0 0 10px #fbc1c1, 0 0 30px #e5c687; \} \}\par
+    .sub-message \{ font-size: 1.4rem; margin-top: 1rem; font-weight: 300; color: #f3d8d8; \}\par
+    /* typewriter */\par
+    .typewriter \{ font-size: 1.3rem; line-height: 1.9; white-space: pre-line; border-right: 2px solid #e5c687; display: inline-block; padding-right: 8px; max-width: 100%; \}\par
+    .glow-word \{ display: inline-block; color: #fbc1c1; font-weight: 600; text-shadow: 0 0 10px #fbc1c1, 0 0 30px #e5c687; \}\par
+    .signature \{ font-family: 'Playfair Display', cursive; font-size: 1.8rem; margin-top: 2rem; color: #e5c687; \}\par
+    /* modal */\par
+    .modal \{ position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(12px); z-index:3000; display: none; align-items: center; justify-content: center; opacity:0; transition: opacity 0.4s; \}\par
+    .modal.show \{ display: flex; opacity:1; \}\par
+    .modal-content \{ max-width: 80vw; max-height: 80vh; border-radius: 32px; border: 2px solid #e5c687; box-shadow: 0 0 60px #e5c687; \}\par
+    /* cake */\par
+    .cake \{ cursor: pointer; font-size: 8rem; filter: drop-shadow(0 0 20px #fbc1c1); transition: 0.3s; \}\par
+    .cake.blow-out \{ filter: drop-shadow(0 0 5px #777); opacity:0.7; transform: scale(0.98); \}\par
+    .wish-text \{ font-size: 2rem; margin-top: 2rem; color: #fbc1c1; \}\par
+    /* secret */\par
+    .secret-icon \{ font-size: 3rem; opacity: 0.6; transition: 0.3s; cursor: pointer; \}\par
+    .secret-icon:hover \{ opacity:1; text-shadow: 0 0 20px gold; \}\par
+    .glass-modal \{ background: rgba(20, 15, 20, 0.4); backdrop-filter: blur(20px); border: 1px solid #e5c687; border-radius: 48px; padding: 3rem; text-align: center; max-width: 500px; color: #fff2e6; \}\par
+    /* final page */\par
+    .final-section \{ min-height: 100vh; background: radial-gradient(circle at 30% 30%, #382e24, #0b0a0c 80%); \}\par
+    .final-card p \{ font-size: 1.3rem; line-height: 1.8; margin: 2rem 0; \}\par
+    .forever \{ font-size: 2.4rem; background: linear-gradient(45deg, #fbc1c1, #e5c687); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glowPulse 2s infinite; \}\par
+    .fade-out-end \{ opacity: 0; transition: opacity 3s; pointer-events: none; \}\par
+    /* footer */\par
+    footer \{ padding: 2rem; text-align: center; font-weight: 300; color: #e5c687aa; \}\par
+    /* responsiveness */\par
+    @media (max-width: 700px) \{ .glass-card \{ padding: 1.8rem; \} .typewriter \{ font-size: 1rem; \} \}\par
+  </style>\par
+</head>\par
+<body>\par
+  <!-- 3D canvas background (three.js) -->\par
+  <canvas id="bg-canvas"></canvas>\par
+\par
+  <!-- INTRO SCREEN -->\par
+  <div id="introScreen" class="intro-screen">\par
+    <div class="intro-content">\par
+      <h1 class="intro-title">\par
+        <span class="line1">A Beautiful Day For</span>\par
+        <span class="line2">A Beautiful Soul</span>\par
+      </h1>\par
+      <button class="btn" id="enterBtn">\f2\u10024?\f3  \f0 Enter the Surprise \f2\u10024?\f0 </button>\par
+    </div>\par
+  </div>\par
+\par
+  <!-- MAIN CONTENT (hidden initially) -->\par
+  <div id="mainContent" style="opacity:0; transition:opacity 1.5s;">\par
+\par
+    <!-- HERO SECTION -->\par
+    <section class="section" id="hero">\par
+      <div class="glass-card" style="text-align: center;">\par
+        <h1 class="hero-heading glow">Happy Birthday <br> Meri Unho\f1\u-10179?\u-8700?\f3  \f1\u-10180?\u-8318?\f2\u10024?\f0 </h1>\par
+        <p class="sub-message">the universe smiles brighter because of you</p>\par
+        <div id="sparkleContainer" style="position:relative; height:60px;"></div>\par
+      </div>\par
+    </section>\par
+\par
+    <!-- LOVE MESSAGE SECTION (typewriter + scroll reveal) -->\par
+    <section class="section">\par
+      <div class="glass-card" style="max-width:800px;">\par
+        <div id="typewriterContainer" class="typewriter" style="min-height: 200px;"></div>\par
+        <div class="signature">\f3\emdash  With love <span style="color:#fbc1c1;">(Apka wo..\f1\u-10179?\u-8700?\f0 )</span></div>\par
+      </div>\par
+    </section>\par
+\par
+    <!-- MAKE A WISH (interactive cake) -->\par
+    <section class="section">\par
+      <div class="glass-card" style="text-align:center;">\par
+        <div id="cakeContainer" class="cake">\f1\u-10180?\u-8318?\f0 <span style="font-size:4rem; display:block;">\f4\u-10179?\u-8849?\u-497?\f0 </span></div>\par
+        <div id="wishMessage" class="wish-text" style="opacity:0;">May all your dreams come true \f2\u10024?\f0 </div>\par
+      </div>\par
+    </section>\par
+\par
+    <!-- SECRET MESSAGE (hidden clickable icon) -->\par
+    <section class="section">\par
+      <div class="secret-icon" id="secretTrigger">\f1\u-10179?\u-9076?\f0 </div>\par
+      <!-- modal hidden -->\par
+      <div id="secretModal" class="modal">\par
+        <div class="glass-modal">\par
+          <h2 class="gold">my little secret</h2>\par
+          <p style="margin: 2rem 0;">you are the poem i never knew i could write. every beat of my heart spells your name. \f1\u-10178?\u-8896?\f0 </p>\par
+          <button class="btn" id="closeSecret">close</button>\par
+        </div>\par
+      </div>\par
+    </section>\par
+\par
+    <!-- \f1\u-10180?\u-8417?\f3  \f0 FINAL WISHES PAGE (separate full screen) -->\par
+    <section class="section final-section" id="finalWishes">\par
+      <div class="glass-card final-card" style="text-align:center; background: rgba(0,0,0,0.2);">\par
+        <p id="editableWish">\par
+          "On this special day, I just want to remind you how truly amazing you are. <br>\par
+          Your smile lights up the darkest days, and your presence makes life more beautiful. <br>\par
+          May this year bring you endless happiness, success, love, and unforgettable memories. <br>\par
+          May every dream you hold in your heart turn into reality. <br>\par
+          You deserve the world and so much more. <br>\par
+          Happy Birthday to someone who means everything to me. \f1\u-10180?\u-8318?\f2\u10024?\f0 "\par
+        </p>\par
+        <div class="forever">\f1\u-10179?\u-9066?\f3  \f0 Forever celebrating you \f1\u-10179?\u-9066?\f0 </div>\par
+      </div>\par
+    </section>\par
+\par
+    <!-- FOOTER -->\par
+    <footer>\par
+      <p>Made with <span style="color:#fbc1c1;">\f4\u10084?\u-497?\f0 </span> \'b7 for the most beautiful soul</p>\par
+    </footer>\par
+  </div>\par
+\par
+  <!-- scripts -->\par
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>\par
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>\par
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>\par
+  <script>\par
+    (function() \{\par
+      // register scrolltrigger\par
+      gsap.registerPlugin(ScrollTrigger);\par
+\par
+      // ----- THREE.JS particles (premium dark gold + pink) -----\par
+      const canvas = document.getElementById('bg-canvas');\par
+      const scene = new THREE.Scene();\par
+      scene.background = new THREE.Color(0x0b0a0c);\par
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\par
+      camera.position.z = 30;\par
+      const renderer = new THREE.WebGLRenderer(\{ canvas, alpha: false, antialias: true \});\par
+      renderer.setSize(window.innerWidth, window.innerHeight);\par
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));\par
+\par
+      const geometry = new THREE.BufferGeometry();\par
+      const count = 2000;\par
+      const positions = new Float32Array(count * 3);\par
+      const colors = new Float32Array(count * 3);\par
+      for (let i = 0; i < count; i++) \{\par
+        let r = (Math.random() - 0.5) * 60;\par
+        let x = (Math.random() - 0.5) * 80;\par
+        let y = (Math.random() - 0.5) * 80;\par
+        let z = (Math.random() - 0.5) * 60;\par
+        positions[i*3] = x; positions[i*3+1] = y; positions[i*3+2] = z;\par
+        // gold / soft pink colors\par
+        let color = new THREE.Color().setHSL(0.08 + Math.random()*0.1, 0.8, 0.6 + Math.random()*0.3);\par
+        colors[i*3] = color.r; colors[i*3+1] = color.g; colors[i*3+2] = color.b;\par
+      \}\par
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));\par
+      geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));\par
+      const material = new THREE.PointsMaterial(\{ size: 0.2, vertexColors: true, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending \});\par
+      const particles = new THREE.Points(geometry, material);\par
+      scene.add(particles);\par
+\par
+      function animateParticles() \{\par
+        requestAnimationFrame(animateParticles);\par
+        particles.rotation.y += 0.0001;\par
+        particles.rotation.x += 0.00005;\par
+        renderer.render(scene, camera);\par
+      \}\par
+      animateParticles();\par
+\par
+      window.addEventListener('resize', () => \{\par
+        camera.aspect = window.innerWidth / window.innerHeight;\par
+        camera.updateProjectionMatrix();\par
+        renderer.setSize(window.innerWidth, window.innerHeight);\par
+      \});\par
+\par
+      // intro logic (music removed)\par
+      const intro = document.getElementById('introScreen');\par
+      const main = document.getElementById('mainContent');\par
+      const enterBtn = document.getElementById('enterBtn');\par
+\par
+      enterBtn.addEventListener('click', () => \{\par
+        gsap.to(intro, \{ opacity: 0, duration: 1.5, ease: 'power2.inOut', onComplete: () => \{\par
+          intro.style.display = 'none';\par
+          main.style.opacity = 1;\par
+        \}\});\par
+      \});\par
+\par
+      // typewriter effect\par
+      const message = `I remember the first time we spoke \f3\emdash  the world felt lighter. \par
+Every moment with you is a page from a fairytale I never want to end. \par
+You have a way of making ordinary days feel extraordinary. \par
+And today, the universe celebrates the masterpiece that is you. \f1\u-10179?\u-9045?\f0 `;\par
+\par
+      const container = document.getElementById('typewriterContainer');\par
+      let i = 0;\par
+      function typeNext() \{\par
+        if (i < message.length) \{\par
+          container.innerHTML += message.charAt(i) === '\\n' ? '<br/>' : message.charAt(i);\par
+          i++;\par
+          setTimeout(typeNext, 50);\par
+        \} else \{\par
+          // add glowing words after\par
+          container.innerHTML = container.innerHTML.replace('fairytale', '<span class="glow-word">fairytale</span>');\par
+          container.innerHTML = container.innerHTML.replace('masterpiece', '<span class="glow-word">masterpiece</span>');\par
+        \}\par
+      \}\par
+      // start typewriter when in view (approx)\par
+      gsap.timeline(\{\par
+        scrollTrigger: \{\par
+          trigger: '#typewriterContainer',\par
+          start: 'top 80%',\par
+          onEnter: () => \{ if(i===0) typeNext(); \}\par
+        \}\par
+      \});\par
+\par
+      // sparkles hero\par
+      setInterval(() => \{\par
+        let heart = document.createElement('span');\par
+        heart.className = 'floating-heart';\par
+        heart.innerHTML = ['\f2\u10024?\f0 ','\f1\u-10179?\u-9066?\f0 ','\f1\u-10180?\u-8417?\f0 ','\f1\u-10180?\u-8318?\f0 ','\f1\u-10179?\u-8700?\f0 '][Math.floor(Math.random()*5)];\par
+        heart.style.left = Math.random() * 100 + '%';\par
+        heart.style.top = Math.random() * 100 + '%';\par
+        heart.style.animation = `float $\{3+Math.random()*4\}s linear`;\par
+        heart.style.opacity = 0.8;\par
+        document.getElementById('hero').appendChild(heart);\par
+        setTimeout(() => heart.remove(), 4000);\par
+      \}, 400);\par
+\par
+      // interactive cake\par
+      const cake = document.getElementById('cakeContainer');\par
+      const wishMsg = document.getElementById('wishMessage');\par
+      cake.addEventListener('click', () => \{\par
+        cake.classList.add('blow-out');\par
+        cake.innerHTML = '\f1\u-10180?\u-8318?\f0 <span style="font-size:4rem;">\f1\u-10179?\u-9048?\f0 </span>';\par
+        wishMsg.style.opacity = 1;\par
+        // trigger fireworks (soft confetti)\par
+        for (let i=0;i<12;i++) \{\par
+          let f = document.createElement('div');\par
+          f.style.position = 'fixed'; f.style.left='50%'; f.style.top='50%';\par
+          f.style.color = '#e5c687'; f.style.fontSize='2rem'; f.style.pointerEvents='none';\par
+          f.innerHTML = ['\f2\u10024?\f0 ','\f1\u-10180?\u-8311?\f0 ','\f1\u-10179?\u-9051?\f0 ','\f1\u-10180?\u-8417?\f0 '][Math.floor(Math.random()*4)];\par
+          f.style.zIndex = 9999;\par
+          document.body.appendChild(f);\par
+          gsap.to(f, \{ x: (Math.random()-0.5)*400, y: (Math.random()-0.5)*400, opacity:0, duration:2, ease:'power2.out', onComplete:()=>f.remove() \});\par
+        \}\par
+      \});\par
+\par
+      // secret modal\par
+      const secretTrigger = document.getElementById('secretTrigger');\par
+      const secretModal = document.getElementById('secretModal');\par
+      const closeSecret = document.getElementById('closeSecret');\par
+      secretTrigger.addEventListener('click', () => secretModal.classList.add('show'));\par
+      closeSecret.addEventListener('click', () => secretModal.classList.remove('show'));\par
+      secretModal.addEventListener('click', (e) => \{ if(e.target === secretModal) secretModal.classList.remove('show'); \});\par
+\par
+      // final wishes soft fade-out effect? (we just add a subtle entrance)\par
+      gsap.from('#finalWishes .glass-card', \{ scrollTrigger: '#finalWishes', scale: 0.8, opacity: 0, duration: 1.5 \});\par
+\par
+      // floating sparkles on final section\par
+      setInterval(() => \{\par
+        let sp = document.createElement('span');\par
+        sp.innerHTML = '\f2\u10024?\f0 '; sp.style.position='absolute'; sp.style.left=Math.random()*100+'%'; sp.style.top=Math.random()*100+'%';\par
+        sp.style.fontSize='2rem'; sp.style.opacity=0.6; sp.style.pointerEvents='none';\par
+        sp.style.animation = 'float 5s infinite';\par
+        document.getElementById('finalWishes').appendChild(sp);\par
+        setTimeout(() => sp.remove(), 5000);\par
+      \}, 500);\par
+\par
+      // add keyframe style\par
+      const styleSheet = document.createElement("style");\par
+      styleSheet.textContent = `@keyframes float \{ 0% \{ transform: translateY(0) rotate(0deg); opacity:0.6; \} 100% \{ transform: translateY(-120px) rotate(20deg); opacity:0; \} \}`;\par
+      document.head.appendChild(styleSheet);\par
+\par
+      // editable wish (double-click to edit)\par
+      const wishP = document.getElementById('editableWish');\par
+      wishP.addEventListener('dblclick', () => \{\par
+        wishP.contentEditable = true;\par
+        wishP.focus();\par
+      \});\par
+      wishP.addEventListener('blur', () => wishP.contentEditable = false);\par
+    \})();\par
+  </script>\par
+\par
+  <!-- ensure smooth scroll, some extra sparkles in hero -->\par
+  <style>\par
+    html \{ scroll-behavior: smooth; \}\par
+    ::selection \{ background: #e5c687; color: #0b0a0c; \}\par
+  </style>\par
+</body>\par
+</html>\par
+}
+ 
